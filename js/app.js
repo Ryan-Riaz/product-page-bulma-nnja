@@ -1,4 +1,3 @@
-console.log("Hello");
 // for activating the burger menu
 
 const bugerIcon = document.querySelector("#burger-icon");
@@ -6,4 +5,24 @@ const navLinks = document.querySelector("#nav-links");
 
 bugerIcon.addEventListener("click", () => {
     navLinks.classList.toggle("is-active");
+});
+
+// tabbed item
+
+const tabs = document.querySelectorAll(".tabs li");
+const tabContent = document.querySelectorAll("#tab-content > div");
+
+tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+        tabs.forEach((item) => item.classList.remove("is-active"));
+        tab.classList.add("is-active");
+        const target = tab.dataset.target;
+        tabContent.forEach((box) => {
+            if (box.getAttribute("id") === target) {
+                box.classList.remove("is-hidden");
+            } else {
+                box.classList.add("is-hidden");
+            }
+        });
+    });
 });
