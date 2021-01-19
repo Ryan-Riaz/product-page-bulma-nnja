@@ -14,7 +14,11 @@
     </head>
     <body>
         <!-- Navigation section starts -->
-        <nav class="navbar" role="navigation" aria-label="main navigation">
+        <nav
+            class="navbar has-shadow"
+            role="navigation"
+            aria-label="main navigation"
+        >
             <div class="navbar-brand">
                 <a class="navbar-item" href="#">
                     <img src="./imgs/logo.png" class="logo" />
@@ -70,7 +74,7 @@
         </section>
         <!-- Breadcrumb section starts-->
 
-        <!-- Product section starts -->
+        <!-- Product Info section starts -->
         <section class="section">
             <div class="container">
                 <div class="columns is-vcentered is-multiline">
@@ -101,18 +105,33 @@
                         />
                     </div>
                     <div class="column is-4">
-                        <p>£10.95</p>
-                        <p>
+                        <p class="is-size-4 mb-4">£10.95</p>
+                        <p class="mb-4">
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Corporis perferendis ipsa totam.
                         </p>
+                        <form>
+                            <div class="field">
+                                <div class="control">
+                                    <div class="select is-dark mb-6">
+                                        <select>
+                                            <option value="">Small size</option>
+                                            <option value="">Large size</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="button is-success">
+                                Add to Cart
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Product section ends -->
+        <!-- Product Info section ends -->
 
-        <!-- tabbed area section ends -->
+        <!-- Tabbed area section starts -->
         <section class="section">
             <div class="container">
                 <div class="columns is-8 is-variable">
@@ -163,18 +182,140 @@
                         </div>
                     </div>
                     <div class="column is-5-tablet">
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing
-                            elit. Impedit officia enim assumenda delectus,
-                            ratione omnis ad sequi aut numquam nam quam
-                            laboriosam, ea corporis labore deserunt illum
-                            distinctio, magnam voluptatem?
-                        </p>
+                        <article class="message is-dark">
+                            <div class="message-header">
+                                <p>Earn Points with the Coffee Club</p>
+                            </div>
+                            <div class="message-body">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Voluptas, incidunt, totam
+                                    eligendi quidem repellat quasi perferendis
+                                    aliquid voluptatum vitae possimus aut
+                                    tempora sequi ducimus, obcaecati atque
+                                    cupiditate aliquam harum repellendus.
+                                </p>
+                                <div class="has-text-centered">
+                                    <button id="sign-up" class="button mt-5">
+                                        Sign up
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- tabbed area section ends -->
+        <!-- Tabbed area section ends -->
+
+        <!-- Product Showcase area section starts -->
+        <section class="section">
+            <div class="container">
+                <h2 class="has-text-centered is-size-4 title">
+                    Related Products
+                </h2>
+                <div class="columns is-centered mt-5 is-8 is-variable">
+                    <div class="column is-4-tablet is-3-desktop">
+                        <div class="card">
+                            <div class="card-image has-text-centered px-6">
+                                <img src="./imgs/p1.png" alt="Coffee" />
+                            </div>
+                            <div class="card-content">
+                                <p>£12.95</p>
+                                <h5 class="title is-size-5">Cortardo Cup</h5>
+                            </div>
+                            <div class="card-footer">
+                                <a class="card-footer-item" href="#">view</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4-tablet is-3-desktop">
+                        <div class="card">
+                            <div class="card-image has-text-centered px-6">
+                                <img src="./imgs/p2.png" alt="Coffee" />
+                            </div>
+                            <div class="card-content">
+                                <p>£12.95</p>
+                                <h5 class="title is-size-5">Cortardo Cup</h5>
+                            </div>
+                            <div class="card-footer">
+                                <a class="card-footer-item" href="#">view</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4-tablet is-3-desktop">
+                        <div class="card">
+                            <div class="card-image has-text-centered px-6">
+                                <img src="./imgs/p3.png" alt="Coffee" />
+                            </div>
+                            <div class="card-content">
+                                <p>£12.95</p>
+                                <h5 class="title is-size-5">Cortardo Cup</h5>
+                            </div>
+                            <div class="card-footer">
+                                <a class="card-footer-item" href="#">view</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Product Showcase section ends -->
+
+        <!-- Modal section ends -->
+        <div class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content has-background-white px-5 py-5">
+                <h2 class="has-text-centered mb-6 is-size-3 title">
+                    Join the Club
+                </h2>
+                <form>
+                    <div class="field">
+                        <label for="name" class="label">Name</label>
+                        <div class="control">
+                            <input
+                                type="text"
+                                class="input"
+                                placeholder="Type your name"
+                                id="name"
+                            />
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="email" class="label">Email</label>
+                        <div class="control">
+                            <input
+                                type="text"
+                                class="input"
+                                placeholder="Type your email"
+                                id="email"
+                            />
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <label class="checkbox">
+                                <input type="checkbox" />
+                                I agree to the
+                                <a href="#">terms and conditions</a>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="has-text-centered mt-6">
+                        <button class="button is-warning">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Modal section ends -->
+
+        <!-- Footer section ends -->
+        <footer class="footer">
+            <p class="has-text-centered is-size-5 is-vcentered">
+                Made with Love ❤️
+            </p>
+        </footer>
+        <!-- Footer section ends -->
 
         <!-- my custom js -->
         <script src="./js/app.js"></script>
